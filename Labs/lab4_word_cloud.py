@@ -29,8 +29,31 @@ class WordCloud:
             <body>\
             <div style="text-align: center; vertical-align: middle; font-family: arial; color: white; background-color:black; border:1px solid black">')
 
-        # your code goes here!
         fo.write('<span style="font-size: 20px"> HELLO </span>')
+        fo.write('<span style= "font-size: 10px"> fathers those </span ')
+        fo.write('<span style= "font-size: 15px"> conceived </span')
+        fo.write('<span style= "font-size: 10px"> bought all battlefield portion met </span')
+        fo.write('<span style= "font-size: 15px"> rather </span')
+        fo.write('<span style="font-size: 25px"> dedicated </span>')
+        fo.write('<span style="font-size: 10px"> forget endure consecrate </span>')
+        fo.write('<span style="font-size: 15px"> devotion </span>')
+        fo.write('<span style="font-size: 10px"> score whether poor forth </span>')
+        fo.write('<span style="font-size: 15px"> us </span>')
+        fo.write('<span style="font-size: 5px"> nobly </span>')
+        fo.write('<span style="font-size: 10px"> be </span>')
+        fo.write('<span style="font-size: 5px"> liberty </span>')
+        fo.write('<span style="font-size: 25px"> a </span>')
+        fo.write('<span style="font-size: 5px"> proper god </span>')
+        fo.write('<span style="font-size: 10px"> is </span>')
+        fo.write('<span style="font-size: 8px"> living </span>')
+        fo.write('<span style="font-size: 10px"> honored unfinished </span>')
+        fo.write('<span style="font-size: 12px"> from </span>')
+        fo.write('<span style="font-size: 8px"> with</span>')
+        fo.write('<span style="font-size: 10px"> not </span>')
+        fo.write('<span style="font-size: 30px"> here </span>')
+        fo.write('<span style="font-size: 10px"> sense or </span>')
+        fo.write('<span style="font-size: 30px"> and </span>')
+
 
         fo.write('</div>\
             </body>\
@@ -38,18 +61,41 @@ class WordCloud:
 
         fo.close()
 
+        file = open("gettisburg.txt", "r")
+        for line in file:
+            word = line.split()
+            print(word)
+        file.close()
 
-    # opens the input file gettisburg.txt
-    # remember to open in in the correct mode
-    # reads the file line by line
     # creates the dictionary containing the word itself
     # and how often it occurs in a sentence
     # makes a call to add_to_dict where the dictionary
     # is actually populated
     # returns a dictionary
     def create_dict(self):
-        my_dict = {}
-        # your code goes here:
+        my_dict = {
+            "1": "fathers",
+            "2": "battlefield",
+            "3": "dedicated",
+            "5": "conceived",
+            "6": "honored",
+            "7": "living",
+            "8": "god",
+        }
+
+        print(my_dict)
+
+        b = my_dict.get("2")
+        print(b)
+
+        if "1" in my_dict:
+            print("yes")
+
+        for word in my_dict:
+            print(word)
+
+        print(len(my_dict))
+
 
         return my_dict
 
@@ -61,7 +107,7 @@ class WordCloud:
     # word occurance counter to 1
     # returns a dictionary
     def add_to_dict(self, word, the_dict):
-        # your code goes here
+
 
         return the_dict
 
